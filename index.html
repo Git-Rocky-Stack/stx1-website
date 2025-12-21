@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>STX.1 System Monitor - Professional Windows System Utility</title>
+    <meta name="description" content="STX.1 System Monitor v2.2.0 - Advanced Windows system monitoring with Game Mode, FPS overlay, real-time alerts, and 30-day historical data. Built with WinUI 3 and .NET 8.">
+    <meta name="keywords" content="Windows system monitor, system optimizer, game mode, FPS overlay, PC cleaner, hardware monitoring, temperature alerts, system tray, gaming optimization">
+    <meta name="author" content="Strategia-X">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://stx-1.com">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="STX.1 System Monitor - Professional Windows System Utility">
+    <meta property="og:description" content="Advanced Windows system monitoring with Game Mode, FPS overlay, real-time alerts, and historical data tracking.">
+    <meta property="og:url" content="https://stx-1.com">
+    <meta property="og:site_name" content="STX.1">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STX.1 System Monitor">
+    <meta name="twitter:description" content="Professional Windows system monitoring & optimization with Game Mode and FPS overlay.">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#D40000">
+    <meta name="msapplication-TileColor" content="#D40000">
+
+    <!-- Additional SEO -->
+    <meta name="application-name" content="STX.1 System Monitor">
+    <meta name="generator" content="Strategia-X">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logos/web_favicon.png">
+    <link rel="apple-touch-icon" href="logos/STX.png">
+
+    <!-- Open Graph Image -->
+    <meta property="og:image" content="logos/STX.png">
+    <meta name="twitter:image" content="logos/STX.png">
+
+    <!-- Fonts - Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://stx1.strategia-x.ai/#organization",
+                "name": "Strategia-X",
+                "url": "https://www.strategia-x.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://stx1.strategia-x.ai/logos/STX.png",
+                    "width": 512,
+                    "height": 512
+                },
+                "sameAs": [
+                    "https://github.com/Git-Rocky-Stack"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://stx1.strategia-x.ai/#website",
+                "url": "https://stx1.strategia-x.ai/",
+                "name": "STX.1 System Monitor",
+                "description": "Professional Windows system monitoring and optimization software",
+                "publisher": {
+                    "@id": "https://stx1.strategia-x.ai/#organization"
+                },
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://stx1.strategia-x.ai/#webpage",
+                "url": "https://stx1.strategia-x.ai/",
+                "name": "STX.1 System Monitor - Professional Windows System Utility",
+                "description": "Advanced Windows system monitoring with Game Mode, FPS overlay, real-time alerts, and 30-day historical data tracking.",
+                "isPartOf": {
+                    "@id": "https://stx1.strategia-x.ai/#website"
+                },
+                "about": {
+                    "@id": "https://stx1.strategia-x.ai/#software"
+                },
+                "inLanguage": "en-US"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://stx1.strategia-x.ai/#software",
+                "name": "STX.1 System Monitor",
+                "alternateName": "STX1",
+                "description": "Professional-grade Windows system monitoring software featuring real-time hardware telemetry, Game Mode with FPS overlay, smart alerts, 30-day historical data, and comprehensive optimization tools.",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Windows 10, Windows 11",
+                "softwareVersion": "2.2.0",
+                "releaseNotes": "Advanced Game Mode with auto detection, FPS overlay, performance profiles, and RAM cache",
+                "downloadUrl": "https://github.com/Git-Rocky-Stack/sysmonitor-windows/releases/download/v2.2.0/STX1-SystemMonitor-v2.2.0-Setup.zip",
+                "installUrl": "https://github.com/Git-Rocky-Stack/sysmonitor-windows/releases/download/v2.2.0/STX1-SystemMonitor-v2.2.0-Setup.zip",
+                "screenshot": "https://stx1.strategia-x.ai/public%20media/Home_Logo.png",
+                "softwareRequirements": ".NET 8 Runtime, x64 Architecture",
+                "memoryRequirements": "4 GB RAM minimum",
+                "storageRequirements": "100 MB",
+                "processorRequirements": "x64 processor",
+                "permissions": "Administrator privileges for hardware monitoring",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "124",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "author": {
+                    "@id": "https://stx1.strategia-x.ai/#organization"
+                },
+                "publisher": {
+                    "@id": "https://stx1.strategia-x.ai/#organization"
+                },
+                "featureList": [
+                    "Real-time CPU, GPU, RAM monitoring",
+                    "Temperature and fan speed tracking",
+                    "Game Mode with auto-detection",
+                    "FPS Overlay (F1 telemetry style)",
+                    "Performance profiles",
+                    "RAM Cache optimization",
+                    "30-day historical data",
+                    "Smart temperature alerts",
+                    "System tray mode",
+                    "Browser privacy cleaner",
+                    "Secure file wiper"
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://stx1.strategia-x.ai/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://stx1.strategia-x.ai/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://stx1.strategia-x.ai/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is STX.1 System Monitor?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "STX.1 is a professional-grade Windows system monitoring and optimization application. It provides real-time hardware telemetry, Game Mode with FPS overlay, smart alerts, and 30-day historical data tracking."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is STX.1 free to use?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, STX.1 is completely free to download and use. All features are included at no cost, and your data stays private on your device."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What are the system requirements?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "STX.1 requires Windows 10 or Windows 11 (x64), .NET 8 Runtime, and administrator privileges for full hardware monitoring access."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is Game Mode?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Game Mode is a one-click gaming optimization feature that automatically detects games, closes background apps, sets high-performance power plans, and provides an FPS overlay with real-time system stats."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ========================================
+           FERRARI-INSPIRED CINEMATIC DESIGN
+           STX.1 System Monitor - Precision Engineering
+           ======================================== */
+
+        :root {
+            /* Core Palette - Authentic Ferrari DNA */
+            --nero: #000000;
+            --nero-light: #0a0a0a;
+            --rosso-corsa: #D40000;
+            --rosso-dark: #A30000;
+            --rosso-glow: rgba(212, 0, 0, 0.45);
+            --giallo-modena: #FFD700;
+            --giallo-dark: #E6C200;
+
+            /* Chrome & Metallics */
+            --chrome: rgba(255, 255, 255, 0.9);
+            --chrome-dim: rgba(255, 255, 255, 0.6);
+            --chrome-subtle: rgba(255, 255, 255, 0.1);
+
+            /* Grays - Carbon Fiber Spectrum */
+            --carbon-900: #0d0d0d;
+            --carbon-800: #141414;
+            --carbon-700: #1a1a1a;
+            --carbon-600: #242424;
+            --carbon-500: #404040;
+            --carbon-400: #6b6b6b;
+            --carbon-300: #a3a3a3;
+
+            /* Typography - Ferrari-matched (squat, blocky) */
+            --font-display: 'Russo One', sans-serif;
+            --font-body: 'Lato', sans-serif;
+
+            /* Spacing Scale */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 8rem;
+            --space-2xl: 12rem;
+
+            /* Timing */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--nero);
+            color: var(--chrome);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Scrollbar - Minimal */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--nero);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--carbon-600);
+            border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--rosso-corsa);
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(12px);
+                opacity: 0.4;
+            }
+        }
+
+        @keyframes lineExpand {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            transition: all 0.5s var(--ease-out-expo);
+        }
+
+        .nav.scrolled {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 1rem 3rem;
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 35px;
+            width: auto;
+            transition: transform 0.3s var(--ease-out-expo);
+        }
+
+        .nav-logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .nav-link {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--chrome-dim);
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--rosso-corsa);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s var(--ease-out-expo);
+        }
+
+        .nav-link:hover {
+            color: var(--chrome);
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .nav-cta {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--chrome);
+            background: var(--rosso-corsa);
+            padding: 0.875rem 1.75rem;
+            text-decoration: none;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 7px solid var(--nero);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .nav-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--rosso-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--rosso-glow);
+        }
+
+        .nav-cta:hover::before {
+            transform: translateX(100%);
+        }
+
+        /* Mobile Menu Toggle */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--chrome);
+            transition: all 0.3s ease;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Video Background */
+        .hero-video-container {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Cinematic Overlays */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(180deg,
+                    rgba(0,0,0,0.4) 0%,
+                    rgba(0,0,0,0.2) 30%,
+                    rgba(0,0,0,0.3) 70%,
+                    rgba(0,0,0,0.95) 100%
+                ),
+                linear-gradient(90deg,
+                    rgba(0,0,0,0.3) 0%,
+                    transparent 50%,
+                    rgba(0,0,0,0.3) 100%
+                );
+        }
+
+        /* Vignette Effect */
+        .hero-vignette {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+            pointer-events: none;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1000px;
+            padding: 0 2rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(220, 38, 38, 0.15);
+            border: 1px solid rgba(220, 38, 38, 0.4);
+            padding: 0.6rem 1.25rem;
+            margin-bottom: 2rem;
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--rosso-corsa);
+            animation: fadeInUp 1s var(--ease-out-expo) 0.2s both;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.72rem, 8.16vw, 6.12rem);
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            line-height: 1.05;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            -webkit-text-stroke: 7px var(--nero);
+            text-stroke: 7px var(--nero);
+            paint-order: stroke fill;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.4s both;
+        }
+
+        .hero-title-line {
+            display: block;
+        }
+
+        .hero-title-accent {
+            color: var(--rosso-corsa);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-body);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 700;
+            color: var(--carbon-300);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.6s both;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.8s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.25rem 2.5rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            border: 7px solid var(--nero);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .btn-primary {
+            background: var(--rosso-corsa);
+            color: var(--chrome);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transform: translateX(-100%);
+        }
+
+        .btn-primary:hover {
+            background: var(--rosso-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px var(--rosso-glow);
+        }
+
+        .btn-primary:hover::before {
+            transform: translateX(100%);
+            transition: transform 0.6s ease;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--chrome);
+            border: 7px solid var(--nero);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--chrome);
+            background: rgba(255,255,255,0.05);
+            transform: translateY(-3px);
+        }
+
+        .btn .material-symbols-outlined {
+            font-size: 1.25rem;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            animation: fadeIn 1s var(--ease-out-expo) 1.5s both;
+        }
+
+        .scroll-text {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--carbon-400);
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(180deg, var(--rosso-corsa), transparent);
+            position: relative;
+        }
+
+        .scroll-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: var(--rosso-corsa);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        /* Video Controls */
+        .video-toggle {
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
+            z-index: 10;
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid var(--carbon-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s var(--ease-out-expo) 1.5s both;
+        }
+
+        .video-toggle:hover {
+            background: rgba(220, 38, 38, 0.3);
+            border-color: var(--rosso-corsa);
+        }
+
+        .video-toggle .material-symbols-outlined {
+            font-size: 1.25rem;
+            color: var(--chrome);
+        }
+
+        /* ========== STATS BAR ========== */
+        .stats-bar {
+            background: var(--carbon-900);
+            padding: 3rem 2rem;
+            position: relative;
+        }
+
+        /* Chrome Divider - Top (tapered, thickest in center) */
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right,
+                transparent 0%,
+                rgba(64, 64, 64, 1) 15%,
+                rgba(168, 168, 168, 1) 35%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(168, 168, 168, 1) 65%,
+                rgba(64, 64, 64, 1) 85%,
+                transparent 100%);
+        }
+
+        /* Chrome Divider - Bottom (tapered, thickest in center) */
+        .stats-bar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right,
+                transparent 0%,
+                rgba(64, 64, 64, 1) 15%,
+                rgba(168, 168, 168, 1) 35%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(168, 168, 168, 1) 65%,
+                rgba(64, 64, 64, 1) 85%,
+                transparent 100%);
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 50px;
+            background: var(--carbon-700);
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--giallo-modena);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--carbon-400);
+        }
+
+        /* ========== CHROME DIVIDER (Tapered) ========== */
+        .chrome-divider {
+            position: relative;
+        }
+
+        .chrome-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right,
+                transparent 0%,
+                rgba(64, 64, 64, 1) 15%,
+                rgba(168, 168, 168, 1) 35%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(168, 168, 168, 1) 65%,
+                rgba(64, 64, 64, 1) 85%,
+                transparent 100%);
+            z-index: 10;
+        }
+
+        /* ========== SECTIONS COMMON ========== */
+        .section {
+            padding: var(--space-xl) 2rem;
+            position: relative;
+        }
+
+        .section-dark {
+            background: var(--carbon-900);
+        }
+
+        /* Gaming Section Silver Shimmer */
+        #gaming {
+            background:
+                linear-gradient(
+                    120deg,
+                    var(--carbon-900) 0%,
+                    var(--carbon-900) 40%,
+                    rgba(80, 80, 80, 0.15) 50%,
+                    var(--carbon-900) 60%,
+                    var(--carbon-900) 100%
+                );
+            background-size: 200% 100%;
+            animation: silverShimmer 8s ease-in-out infinite;
+        }
+
+        @keyframes silverShimmer {
+            0% {
+                background-position: 200% center;
+            }
+            50% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-lg);
+        }
+
+        .section-eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--rosso-corsa);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .section-eyebrow::before,
+        .section-eyebrow::after {
+            display: none;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            -webkit-text-stroke: 7px var(--nero);
+            text-stroke: 7px var(--nero);
+            paint-order: stroke fill;
+        }
+
+        .section-desc {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--carbon-300);
+            line-height: 1.8;
+        }
+
+        /* ========== FEATURES SECTION ========== */
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--carbon-800);
+            border: 1px solid var(--carbon-700);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s var(--ease-out-expo);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--rosso-corsa);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s var(--ease-out-expo);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--rosso-corsa);
+            box-shadow: 0 20px 50px rgba(212, 0, 0, 0.35), 0 0 30px rgba(212, 0, 0, 0.2);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover .feature-icon {
+            background: linear-gradient(135deg, var(--rosso-corsa), #ff2020);
+            box-shadow: 0 0 30px rgba(212, 0, 0, 0.5);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--rosso-corsa), var(--rosso-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.75rem;
+            position: relative;
+        }
+
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+            pointer-events: none;
+        }
+
+        .feature-icon .material-symbols-outlined {
+            font-size: 1.75rem;
+            color: var(--chrome);
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: var(--giallo-modena);
+        }
+
+        .feature-card p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--carbon-300);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--rosso-corsa);
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            padding: 0.4rem 0.8rem;
+        }
+
+        /* ========== GAME MODE SECTION ========== */
+        .gaming-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .gaming-text {
+            padding-right: 2rem;
+        }
+
+        .gaming-text .section-eyebrow {
+            justify-content: flex-start;
+        }
+
+        .gaming-text .section-eyebrow::before {
+            display: none;
+        }
+
+        .gaming-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            -webkit-text-stroke: 7px var(--nero);
+            text-stroke: 7px var(--nero);
+            paint-order: stroke fill;
+        }
+
+        .gaming-title span {
+            color: var(--rosso-corsa);
+        }
+
+        .gaming-desc {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--carbon-300);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .gaming-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .gaming-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+
+        .gaming-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--carbon-800);
+            border: 1px solid var(--carbon-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .gaming-feature:hover .gaming-feature-icon {
+            border-color: var(--rosso-corsa);
+            background: rgba(220, 38, 38, 0.1);
+        }
+
+        .gaming-feature-icon .material-symbols-outlined {
+            font-size: 1.25rem;
+            color: var(--rosso-corsa);
+        }
+
+        .gaming-feature h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .gaming-feature p {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--carbon-400);
+        }
+
+        /* FPS Overlay Preview */
+        .gaming-visual {
+            position: relative;
+        }
+
+        .fps-overlay-preview {
+            background: var(--carbon-800);
+            border: 1px solid var(--carbon-600);
+            padding: 2rem;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fps-overlay-preview::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .fps-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--carbon-700);
+            margin-bottom: 1.5rem;
+        }
+
+        .fps-header .material-symbols-outlined {
+            color: var(--rosso-corsa);
+        }
+
+        .fps-header span:last-child {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--rosso-corsa);
+        }
+
+        .fps-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .fps-stat {
+            background: var(--carbon-900);
+            border: 1px solid var(--carbon-700);
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .fps-stat-value {
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            color: var(--rosso-corsa);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .fps-stat-label {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--carbon-400);
+        }
+
+        /* ========== DOWNLOAD SECTION ========== */
+        .download-section {
+            padding: var(--space-2xl) 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--nero);
+        }
+
+        .download-video-container {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .download-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .download-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.90) 100%);
+            z-index: 1;
+        }
+
+        .download-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Chrome divider at top of download section */
+        .download-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right,
+                transparent 0%,
+                rgba(64, 64, 64, 1) 15%,
+                rgba(168, 168, 168, 1) 35%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(168, 168, 168, 1) 65%,
+                rgba(64, 64, 64, 1) 85%,
+                transparent 100%);
+            z-index: 10;
+        }
+
+        .download-content {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .download-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            -webkit-text-stroke: 7px var(--nero);
+            text-stroke: 7px var(--nero);
+            paint-order: stroke fill;
+        }
+
+        .download-desc {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--carbon-300);
+            margin-bottom: 2.5rem;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--chrome);
+            border-radius: 8px;
+            background: var(--rosso-corsa);
+            padding: 1.5rem 3rem;
+            position: relative;
+            overflow: hidden;
+            border: 7px solid var(--nero);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+        }
+
+        .download-btn:hover {
+            background: var(--rosso-dark);
+            transform: translateY(-4px);
+            box-shadow: 0 25px 60px var(--rosso-glow);
+        }
+
+        .download-btn:hover::before {
+            transform: translateX(100%);
+            transition: transform 0.6s ease;
+        }
+
+        .download-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .download-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--carbon-300);
+            transition: color 0.3s ease;
+        }
+
+        .download-info-item:hover {
+            color: var(--rosso-corsa);
+        }
+
+        .download-info-item .material-symbols-outlined {
+            font-size: 1.5rem;
+            color: var(--rosso-corsa);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--carbon-900);
+            border-top: 1px solid var(--carbon-700);
+            padding: 4rem 2rem 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo img {
+            height: 35px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-logo:hover img {
+            opacity: 1;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-link {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--carbon-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--rosso-corsa);
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right,
+                transparent 0%,
+                rgba(64, 64, 64, 1) 15%,
+                rgba(168, 168, 168, 1) 35%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(168, 168, 168, 1) 65%,
+                rgba(64, 64, 64, 1) 85%,
+                transparent 100%);
+            margin: 0 auto 2rem;
+        }
+
+        .footer-copy {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            color: var(--carbon-500);
+        }
+
+        .footer-copy a {
+            color: var(--rosso-corsa);
+            text-decoration: none;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gaming-content {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .gaming-visual {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .gaming-text {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .gaming-text .section-eyebrow {
+                justify-content: center;
+            }
+
+            .gaming-text .section-eyebrow::before {
+                display: block;
+            }
+
+            .gaming-features {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: clamp(3rem, 15vw, 6rem);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem 1rem;
+            }
+
+            .stat-item:not(:last-child)::after {
+                display: none;
+            }
+
+            .stat-item:nth-child(odd)::after {
+                display: block;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .download-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+
+            .scroll-indicator,
+            .video-toggle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: var(--space-lg) 1.5rem;
+            }
+
+            .hero-badge {
+                font-size: 0.6rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-card {
+                padding: 2rem;
+            }
+        }
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--rosso-corsa);
+            color: var(--chrome);
+            padding: 1rem 2rem;
+            z-index: 9999;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: top 0.3s ease;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+            outline: none;
+        }
+
+        /* Focus States for Accessibility */
+        :focus-visible {
+            outline: 2px solid var(--rosso-corsa);
+            outline-offset: 4px;
+        }
+
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Keyboard Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="logos/toolbar_logo.png" alt="STX.1">
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="guide.html" class="nav-link">User Guide</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#download" class="nav-cta">Download</a>
+            </div>
+            <div class="nav-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <section class="hero" aria-label="Introduction">
+        <!-- Video Background -->
+        <div class="hero-video-container">
+            <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+                <source src="public media/main h1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Overlays -->
+        <div class="hero-overlay"></div>
+        <div class="hero-vignette"></div>
+
+        <!-- Content -->
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="material-symbols-outlined" style="font-size: 14px;">bolt</span>
+                Version 2.2.0 - Advanced Game Mode
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-line">PRECISION</span>
+                <span class="hero-title-line hero-title-accent">PERFORMANCE</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Professional-grade system monitoring engineered for peak performance. Real-time telemetry, intelligent optimization, and race-ready Game Mode.
+            </p>
+
+            <div class="hero-actions">
+                <a href="https://github.com/Git-Rocky-Stack/sysmonitor-windows/releases/download/v2.2.0/STX1-SystemMonitor-v2.2.0-Setup.zip" class="btn btn-primary" download>
+                    <span class="material-symbols-outlined">download</span>
+                    Download for Windows
+                </a>
+                <a href="https://github.com/Git-Rocky-Stack/sysmonitor-windows" target="_blank" class="btn btn-secondary">
+                    <span class="material-symbols-outlined">code</span>
+                    View Source
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Explore</span>
+            <div class="scroll-line"></div>
+        </div>
+
+        <!-- Video Toggle -->
+        <button class="video-toggle" id="videoToggle" onclick="toggleVideo()" aria-label="Pause video" title="Pause/Play video">
+            <span class="material-symbols-outlined" id="videoIcon" aria-hidden="true">pause</span>
+        </button>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <div class="stat-value">8+</div>
+                <div class="stat-label">Monitoring Tools</div>
+            </div>
+            <div class="stat-item reveal reveal-delay-1">
+                <div class="stat-value">6</div>
+                <div class="stat-label">Game Mode Features</div>
+            </div>
+            <div class="stat-item reveal reveal-delay-2">
+                <div class="stat-value">30</div>
+                <div class="stat-label">Days History</div>
+            </div>
+            <div class="stat-item reveal reveal-delay-3">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Free & Private</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="section chrome-divider" id="features" aria-labelledby="features-title">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">Capabilities</div>
+            <h2 class="section-title" id="features-title">TOTAL SYSTEM CONTROL</h2>
+            <p class="section-desc">Professional monitoring and optimization tools engineered for precision and performance.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">memory</span>
+                </div>
+                <h3>HARDWARE TELEMETRY</h3>
+                <p>Real-time CPU, GPU, RAM, and storage monitoring with temperature tracking and performance metrics.</p>
+                <span class="feature-tag">Real-time</span>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">tune</span>
+                </div>
+                <h3>SYSTEM OPTIMIZATION</h3>
+                <p>Clean junk files, fix registry issues, manage startup programs, and schedule automated maintenance.</p>
+                <span class="feature-tag">One-click</span>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">notifications_active</span>
+                </div>
+                <h3>SMART ALERTS</h3>
+                <p>Get notified when temperatures exceed thresholds, battery is low, or RAM usage is high.</p>
+                <span class="feature-tag">Automatic</span>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">timeline</span>
+                </div>
+                <h3>HISTORICAL DATA</h3>
+                <p>30-day metric tracking with interactive charts. Analyze trends for CPU, memory, and temperature.</p>
+                <span class="feature-tag">30 Days</span>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">dock_to_bottom</span>
+                </div>
+                <h3>SYSTEM TRAY MODE</h3>
+                <p>Run in background with live stats tooltip. Quick access menu and one-click restore.</p>
+                <span class="feature-tag">Background</span>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="feature-icon">
+                    <span class="material-symbols-outlined">shield</span>
+                </div>
+                <h3>PRIVACY TOOLS</h3>
+                <p>Browser privacy cleaner and secure file wiper with military-grade deletion methods.</p>
+                <span class="feature-tag">Secure</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Section -->
+    <section class="section section-dark chrome-divider" id="gaming" aria-labelledby="gaming-title">
+        <div class="gaming-content">
+            <div class="gaming-text">
+                <div class="section-eyebrow">Game Mode</div>
+                <h2 class="gaming-title reveal" id="gaming-title">ENGINEERED FOR <span>GAMING</span></h2>
+                <p class="gaming-desc reveal reveal-delay-1">One-click gaming optimization with automatic game detection, customizable performance profiles, and a real-time FPS overlay inspired by F1 telemetry.</p>
+
+                <div class="gaming-features">
+                    <div class="gaming-feature reveal reveal-delay-2">
+                        <div class="gaming-feature-icon">
+                            <span class="material-symbols-outlined">auto_awesome</span>
+                        </div>
+                        <div>
+                            <h4>Auto Game Detection</h4>
+                            <p>Detects 50+ games automatically and enables optimization</p>
+                        </div>
+                    </div>
+
+                    <div class="gaming-feature reveal reveal-delay-3">
+                        <div class="gaming-feature-icon">
+                            <span class="material-symbols-outlined">speed</span>
+                        </div>
+                        <div>
+                            <h4>Performance Profiles</h4>
+                            <p>Maximum, Balanced, and Streaming presets</p>
+                        </div>
+                    </div>
+
+                    <div class="gaming-feature reveal reveal-delay-4">
+                        <div class="gaming-feature-icon">
+                            <span class="material-symbols-outlined">memory_alt</span>
+                        </div>
+                        <div>
+                            <h4>RAM Cache</h4>
+                            <p>Redirect temp files to RAM for faster loading</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gaming-visual reveal">
+                <div class="fps-overlay-preview">
+                    <div class="fps-header">
+                        <span class="material-symbols-outlined">monitor_heart</span>
+                        <span>FPS Overlay</span>
+                    </div>
+                    <div class="fps-stats">
+                        <div class="fps-stat">
+                            <div class="fps-stat-value">144</div>
+                            <div class="fps-stat-label">FPS</div>
+                        </div>
+                        <div class="fps-stat">
+                            <div class="fps-stat-value">149°F</div>
+                            <div class="fps-stat-label">CPU Temp</div>
+                        </div>
+                        <div class="fps-stat">
+                            <div class="fps-stat-value">78%</div>
+                            <div class="fps-stat-label">GPU Usage</div>
+                        </div>
+                        <div class="fps-stat">
+                            <div class="fps-stat-value">12.4GB</div>
+                            <div class="fps-stat-label">RAM Used</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section chrome-divider" id="download" aria-labelledby="download-title">
+        <!-- Video Background -->
+        <div class="download-video-container">
+            <video class="download-video" autoplay muted loop playsinline>
+                <source src="public media/2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="download-overlay"></div>
+
+        <div class="download-content">
+            <div class="section-eyebrow reveal">Get Started</div>
+            <h2 class="download-title reveal reveal-delay-1" id="download-title">DOWNLOAD STX.1</h2>
+            <p class="download-desc reveal reveal-delay-2">Free, private, and powerful. Your data stays on your device.</p>
+
+            <a href="https://github.com/Git-Rocky-Stack/sysmonitor-windows/releases/download/v2.2.0/STX1-SystemMonitor-v2.2.0-Setup.zip" class="download-btn reveal reveal-delay-3" download>
+                <span class="material-symbols-outlined">download</span>
+                Download v2.2.0 Installer
+            </a>
+
+            <div class="download-info reveal reveal-delay-4">
+                <div class="download-info-item">
+                    <span class="material-symbols-outlined">desktop_windows</span>
+                    Windows 10/11
+                </div>
+                <div class="download-info-item">
+                    <span class="material-symbols-outlined">memory</span>
+                    x64 Architecture
+                </div>
+                <div class="download-info-item">
+                    <span class="material-symbols-outlined">code</span>
+                    .NET 8 Runtime
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer chrome-divider" role="contentinfo">
+        <div class="footer-inner">
+            <a href="/" class="footer-logo">
+                <img src="logos/toolbar_logo.png" alt="STX.1">
+            </a>
+
+            <div class="footer-links">
+                <a href="guide.html" class="footer-link">User Guide</a>
+                <a href="blog.html" class="footer-link">Blog</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="https://github.com/Git-Rocky-Stack/sysmonitor-windows" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://www.strategia-x.com" target="_blank" class="footer-link">Strategia-X</a>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-copy">
+                &copy; 2025 <a href="https://www.strategia-x.com" target="_blank">Strategia-X</a>. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Video toggle
+        const video = document.getElementById('heroVideo');
+        const videoIcon = document.getElementById('videoIcon');
+
+        function toggleVideo() {
+            if (video.paused) {
+                video.play();
+                videoIcon.textContent = 'pause';
+            } else {
+                video.pause();
+                videoIcon.textContent = 'play_arrow';
+            }
+        }
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Mobile menu toggle (placeholder)
+        function toggleMenu() {
+            // Add mobile menu functionality here
+            console.log('Menu toggled');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# STX.1 System Monitor - robots.txt
+# https://stx1.strategia-x.ai/
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://stx1.strategia-x.ai/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow access to any private directories (if they exist)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Allow search engines to crawl all main content
+Allow: /index.html
+Allow: /guide.html
+Allow: /blog.html
+Allow: /about.html
+Allow: /css/
+Allow: /public media/
+
+# Block access to source maps and development files
+Disallow: /*.map$
+Disallow: /*.log$

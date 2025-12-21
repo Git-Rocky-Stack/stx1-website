@@ -1,0 +1,926 @@
+/**
+ * STX.1 System Monitor - Global Styles
+ * =====================================
+ * Ferrari-Inspired Cinematic Design System
+ *
+ * Table of Contents:
+ * 1. CSS Custom Properties (Design Tokens)
+ * 2. Reset & Base Styles
+ * 3. Accessibility & Focus States
+ * 4. Typography
+ * 5. Layout & Grid
+ * 6. Navigation
+ * 7. Buttons & Interactive Elements
+ * 8. Cards & Containers
+ * 9. Chrome Dividers
+ * 10. Footer
+ * 11. Utility Classes
+ * 12. Animations
+ * 13. Print Styles
+ * 14. Responsive Breakpoints
+ */
+
+/* =========================================
+   1. CSS CUSTOM PROPERTIES (Design Tokens)
+   ========================================= */
+:root {
+    /* Core Palette - Authentic Ferrari DNA */
+    --nero: #000000;
+    --nero-light: #0a0a0a;
+    --rosso-corsa: #D40000;
+    --rosso-dark: #A30000;
+    --rosso-glow: rgba(212, 0, 0, 0.45);
+    --giallo-modena: #FFD700;
+    --giallo-dark: #E6C200;
+
+    /* Chrome & Metallics */
+    --chrome: rgba(255, 255, 255, 0.9);
+    --chrome-dim: rgba(255, 255, 255, 0.6);
+    --chrome-subtle: rgba(255, 255, 255, 0.1);
+
+    /* Grays - Carbon Fiber Spectrum */
+    --carbon-900: #0d0d0d;
+    --carbon-800: #141414;
+    --carbon-700: #1a1a1a;
+    --carbon-600: #242424;
+    --carbon-500: #404040;
+    --carbon-400: #6b6b6b;
+    --carbon-300: #a3a3a3;
+    --carbon-200: #d4d4d4;
+
+    /* Typography */
+    --font-display: 'Russo One', sans-serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Spacing Scale */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    --space-2xl: 12rem;
+
+    /* Timing Functions */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+
+    /* Z-Index Scale */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 500;
+    --z-fixed: 1000;
+    --z-modal: 2000;
+    --z-tooltip: 3000;
+
+    /* Border Radius */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+
+    /* Focus Ring */
+    --focus-ring: 0 0 0 3px rgba(212, 0, 0, 0.5);
+    --focus-ring-offset: 0 0 0 2px var(--nero);
+}
+
+/* =========================================
+   2. RESET & BASE STYLES
+   ========================================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--nero);
+    color: var(--chrome);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+/* Remove default list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default link styles */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Images */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form elements */
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Remove button styles */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--nero);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--carbon-600);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rosso-corsa);
+}
+
+/* Selection */
+::selection {
+    background: var(--rosso-corsa);
+    color: var(--chrome);
+}
+
+/* =========================================
+   3. ACCESSIBILITY & FOCUS STATES
+   ========================================= */
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rosso-corsa);
+    color: var(--chrome);
+    padding: 1rem 2rem;
+    z-index: var(--z-tooltip);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: top var(--transition-fast) ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: none;
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring-offset), var(--focus-ring);
+}
+
+/* Remove focus ring for mouse users */
+:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Ensure sufficient color contrast for links */
+a:focus-visible {
+    outline: 2px solid var(--rosso-corsa);
+    outline-offset: 4px;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+    :root {
+        --chrome: #ffffff;
+        --carbon-300: #ffffff;
+        --carbon-400: #cccccc;
+    }
+}
+
+/* =========================================
+   4. TYPOGRAPHY
+   ========================================= */
+
+/* Display Headings */
+.heading-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+h1, .h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+h2, .h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+h3, .h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+h4, .h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* Body Text */
+.text-body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--carbon-300);
+}
+
+.text-lead {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+/* Eyebrow/Label Text */
+.eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--rosso-corsa);
+}
+
+/* Text Stroke Effect */
+.text-stroke {
+    -webkit-text-stroke: 7px var(--nero);
+    text-stroke: 7px var(--nero);
+    paint-order: stroke fill;
+}
+
+/* =========================================
+   5. LAYOUT & GRID
+   ========================================= */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: var(--space-xl) 2rem;
+    position: relative;
+}
+
+.section-dark {
+    background: var(--carbon-900);
+}
+
+/* Flexbox Utilities */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+
+/* Grid Utilities */
+.grid {
+    display: grid;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* =========================================
+   6. NAVIGATION
+   ========================================= */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    padding: 1.5rem 3rem;
+    transition: all var(--transition-slow) var(--ease-out-expo);
+}
+
+.nav.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 1rem 3rem;
+}
+
+.nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-logo img {
+    height: 35px;
+    width: auto;
+    transition: transform var(--transition-normal) var(--ease-out-expo);
+}
+
+.nav-logo:hover img,
+.nav-logo:focus img {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--chrome-dim);
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color var(--transition-normal) ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--rosso-corsa);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-normal) var(--ease-out-expo);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link[aria-current="page"] {
+    color: var(--chrome);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link[aria-current="page"]::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* =========================================
+   7. BUTTONS & INTERACTIVE ELEMENTS
+   ========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1.25rem 2.5rem;
+    border: 7px solid var(--nero);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal) var(--ease-out-expo);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--rosso-corsa);
+    color: var(--chrome);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--rosso-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px var(--rosso-glow);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--chrome);
+    border: 2px solid var(--chrome-dim);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    border-color: var(--chrome);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* CTA Button (Navigation) */
+.nav-cta {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--chrome);
+    background: var(--rosso-corsa);
+    padding: 0.875rem 1.75rem;
+    border: 7px solid var(--nero);
+    transition: all var(--transition-normal) var(--ease-out-expo);
+}
+
+.nav-cta:hover,
+.nav-cta:focus {
+    background: var(--rosso-dark);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   8. CARDS & CONTAINERS
+   ========================================= */
+
+.card {
+    background: var(--carbon-800);
+    border: 1px solid var(--carbon-700);
+    transition: all var(--transition-normal) ease;
+}
+
+.card:hover {
+    border-color: var(--carbon-600);
+    transform: translateY(-4px);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Feature Card */
+.feature-card {
+    background: var(--carbon-800);
+    border: 1px solid var(--carbon-700);
+    padding: 2.5rem;
+    position: relative;
+    transition: all var(--transition-normal) var(--ease-out-expo);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rosso-corsa), var(--giallo-modena));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal) var(--ease-out-expo);
+}
+
+.feature-card:hover,
+.feature-card:focus-within {
+    border-color: var(--carbon-600);
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card:hover::before,
+.feature-card:focus-within::before {
+    transform: scaleX(1);
+}
+
+/* =========================================
+   9. CHROME DIVIDERS
+   ========================================= */
+
+.chrome-divider {
+    position: relative;
+}
+
+.chrome-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right,
+        transparent 0%,
+        rgba(64, 64, 64, 1) 15%,
+        rgba(168, 168, 168, 1) 35%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(168, 168, 168, 1) 65%,
+        rgba(64, 64, 64, 1) 85%,
+        transparent 100%);
+    z-index: 10;
+}
+
+.chrome-divider-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right,
+        transparent 0%,
+        rgba(64, 64, 64, 1) 15%,
+        rgba(168, 168, 168, 1) 35%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(168, 168, 168, 1) 65%,
+        rgba(64, 64, 64, 1) 85%,
+        transparent 100%);
+    z-index: 10;
+}
+
+/* =========================================
+   10. FOOTER
+   ========================================= */
+
+.footer {
+    background: var(--carbon-900);
+    border-top: 1px solid var(--carbon-700);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 35px;
+    opacity: 0.8;
+    transition: opacity var(--transition-normal) ease;
+}
+
+.footer-logo:hover img,
+.footer-logo:focus img {
+    opacity: 1;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-link {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--carbon-400);
+    transition: color var(--transition-normal) ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: var(--rosso-corsa);
+}
+
+.footer-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right,
+        transparent 0%,
+        rgba(64, 64, 64, 1) 15%,
+        rgba(168, 168, 168, 1) 35%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(168, 168, 168, 1) 65%,
+        rgba(64, 64, 64, 1) 85%,
+        transparent 100%);
+    margin: 0 auto 2rem;
+}
+
+.footer-copy {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--carbon-500);
+}
+
+.footer-copy a {
+    color: var(--carbon-400);
+    transition: color var(--transition-normal) ease;
+}
+
+.footer-copy a:hover,
+.footer-copy a:focus {
+    color: var(--rosso-corsa);
+}
+
+/* =========================================
+   11. UTILITY CLASSES
+   ========================================= */
+
+/* Colors */
+.text-rosso { color: var(--rosso-corsa); }
+.text-giallo { color: var(--giallo-modena); }
+.text-chrome { color: var(--chrome); }
+.text-muted { color: var(--carbon-400); }
+
+.bg-nero { background-color: var(--nero); }
+.bg-carbon-900 { background-color: var(--carbon-900); }
+.bg-carbon-800 { background-color: var(--carbon-800); }
+
+/* Spacing */
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Display */
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+
+/* =========================================
+   12. ANIMATIONS
+   ========================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(12px);
+        opacity: 0.4;
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Reveal Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* =========================================
+   13. PRINT STYLES
+   ========================================= */
+
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .nav,
+    .skip-link,
+    .footer,
+    .btn,
+    video,
+    .video-toggle,
+    .scroll-indicator {
+        display: none !important;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+/* =========================================
+   14. RESPONSIVE BREAKPOINTS
+   ========================================= */
+
+/* Tablet and below */
+@media (max-width: 968px) {
+    .nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: var(--space-lg) 1.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

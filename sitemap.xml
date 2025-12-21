@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://stx1.strategia-x.ai/</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://stx1.strategia-x.ai/public%20media/Home_Logo.png</image:loc>
+            <image:title>STX.1 System Monitor Logo</image:title>
+        </image:image>
+        <video:video>
+            <video:thumbnail_loc>https://stx1.strategia-x.ai/public%20media/Home_Logo.png</video:thumbnail_loc>
+            <video:title>STX.1 System Monitor - Hero Video</video:title>
+            <video:description>High-performance system monitoring for Windows</video:description>
+            <video:content_loc>https://stx1.strategia-x.ai/public%20media/h1.mp4</video:content_loc>
+        </video:video>
+    </url>
+
+    <!-- User Guide -->
+    <url>
+        <loc>https://stx1.strategia-x.ai/guide.html</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Blog -->
+    <url>
+        <loc>https://stx1.strategia-x.ai/blog.html</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- About -->
+    <url>
+        <loc>https://stx1.strategia-x.ai/about.html</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Features Page (if exists) -->
+    <url>
+        <loc>https://stx1.strategia-x.ai/index.html#features</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Download Section -->
+    <url>
+        <loc>https://stx1.strategia-x.ai/index.html#download</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+</urlset>
