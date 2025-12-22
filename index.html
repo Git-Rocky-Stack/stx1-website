@@ -582,6 +582,31 @@
             display: block;
         }
 
+        .hero-title-line:first-child {
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(255, 245, 180, 1) 25%,
+                rgba(255, 235, 150, 1) 50%,
+                rgba(255, 245, 180, 1) 75%,
+                rgba(255, 255, 255, 0.9) 100%
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: yellowGradient 8s ease-in-out infinite;
+        }
+
+        @keyframes yellowGradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
         .hero-title-accent {
             color: var(--rosso-corsa);
             position: relative;
