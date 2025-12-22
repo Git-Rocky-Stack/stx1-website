@@ -1637,7 +1637,7 @@
     <section class="hero" aria-label="Introduction">
         <!-- Video Background -->
         <div class="hero-video-container">
-            <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+            <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="public media/d1.jpg">
                 <source src="public media/main h1.mp4" type="video/mp4">
             </video>
         </div>
@@ -1847,8 +1847,8 @@
     <section class="download-section chrome-divider" id="download" aria-labelledby="download-title">
         <!-- Video Background -->
         <div class="download-video-container">
-            <video class="download-video" autoplay muted loop playsinline>
-                <source src="public media/2.mp4" type="video/mp4">
+            <video class="download-video" id="downloadVideo" muted loop playsinline preload="none" poster="public media/d2.jpg">
+                <source data-src="public media/2.mp4" type="video/mp4">
             </video>
         </div>
         <div class="download-overlay"></div>
@@ -1886,7 +1886,7 @@
     <footer class="footer chrome-divider" role="contentinfo">
         <div class="footer-inner">
             <a href="/" class="footer-logo">
-                <img src="logos/toolbar_logo.png" alt="STX.1">
+                <img src="logos/toolbar_logo.png" alt="STX.1" loading="lazy">
             </a>
 
             <div class="footer-links">
@@ -1952,6 +1952,26 @@
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
+
+        // Lazy load download section video when in view
+        const downloadVideo = document.getElementById('downloadVideo');
+        if (downloadVideo) {
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const source = downloadVideo.querySelector('source[data-src]');
+                        if (source && source.dataset.src) {
+                            source.src = source.dataset.src;
+                            source.removeAttribute('data-src');
+                            downloadVideo.load();
+                            downloadVideo.play();
+                        }
+                        videoObserver.unobserve(downloadVideo);
+                    }
+                });
+            }, { rootMargin: '200px' });
+            videoObserver.observe(downloadVideo);
+        }
 
         // Mobile menu toggle (placeholder)
         function toggleMenu() {
