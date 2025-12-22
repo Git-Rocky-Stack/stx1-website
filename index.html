@@ -1476,7 +1476,9 @@
             }
 
             .hero-title {
-                font-size: clamp(3rem, 15vw, 6rem);
+                font-size: clamp(2rem, 12vw, 6rem);
+                -webkit-text-stroke: 4px var(--nero);
+                text-stroke: 4px var(--nero);
             }
 
             .stats-grid {
@@ -1526,6 +1528,12 @@
         @media (max-width: 480px) {
             .section {
                 padding: var(--space-lg) 1.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(1.75rem, 11vw, 3rem);
+                -webkit-text-stroke: 3px var(--nero);
+                text-stroke: 3px var(--nero);
             }
 
             .hero-badge {
