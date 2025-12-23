@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, height=630">
+    <title>STX.1 OG Image Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* OG Image Container - Standard 1200x630 */
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #000000 50%, #0d0d0d 100%);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Carbon Fiber Texture Overlay */
+        .og-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(30, 30, 30, 0.3) 2px,
+                    rgba(30, 30, 30, 0.3) 4px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(30, 30, 30, 0.3) 2px,
+                    rgba(30, 30, 30, 0.3) 4px
+                );
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Vignette Effect */
+        .og-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                ellipse at center,
+                transparent 40%,
+                rgba(0, 0, 0, 0.6) 100%
+            );
+            pointer-events: none;
+        }
+
+        /* Red Accent Glow - Top Left */
+        .red-glow-tl {
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(
+                circle,
+                rgba(212, 0, 0, 0.15) 0%,
+                rgba(212, 0, 0, 0.05) 40%,
+                transparent 70%
+            );
+            pointer-events: none;
+        }
+
+        /* Red Accent Glow - Bottom Right */
+        .red-glow-br {
+            position: absolute;
+            bottom: -300px;
+            right: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(
+                circle,
+                rgba(212, 0, 0, 0.12) 0%,
+                rgba(212, 0, 0, 0.04) 40%,
+                transparent 70%
+            );
+            pointer-events: none;
+        }
+
+        /* Content Wrapper */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 80px;
+            text-align: center;
+        }
+
+        /* Eyebrow Text */
+        .eyebrow {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: #D40000;
+            margin-bottom: 24px;
+        }
+
+        /* Main Title - STX.1 */
+        .title {
+            font-family: 'Russo One', sans-serif;
+            font-size: 140px;
+            font-weight: 400;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.95);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            -webkit-text-stroke: 6px #242424;
+            paint-order: stroke fill;
+            text-shadow:
+                0 0 60px rgba(212, 0, 0, 0.3),
+                0 4px 20px rgba(0, 0, 0, 0.8);
+            margin-bottom: 8px;
+        }
+
+        /* Subtitle - SYSTEM MONITOR */
+        .subtitle {
+            font-family: 'Russo One', sans-serif;
+            font-size: 52px;
+            font-weight: 400;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.85);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            -webkit-text-stroke: 4px #242424;
+            paint-order: stroke fill;
+            margin-bottom: 40px;
+        }
+
+        /* Chrome Divider */
+        .divider {
+            width: 300px;
+            height: 3px;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                #404040 15%,
+                #a3a3a3 35%,
+                #ffffff 50%,
+                #a3a3a3 65%,
+                #404040 85%,
+                transparent 100%
+            );
+            margin-bottom: 36px;
+            border-radius: 2px;
+        }
+
+        /* Tagline */
+        .tagline {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 48px;
+        }
+
+        .tagline span {
+            color: #D40000;
+        }
+
+        /* URL */
+        .url {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Corner Accents */
+        .corner-accent {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            z-index: 5;
+        }
+
+        .corner-accent.top-left {
+            top: 40px;
+            left: 40px;
+            border-top: 3px solid #D40000;
+            border-left: 3px solid #D40000;
+        }
+
+        .corner-accent.top-right {
+            top: 40px;
+            right: 40px;
+            border-top: 3px solid #D40000;
+            border-right: 3px solid #D40000;
+        }
+
+        .corner-accent.bottom-left {
+            bottom: 40px;
+            left: 40px;
+            border-bottom: 3px solid #D40000;
+            border-left: 3px solid #D40000;
+        }
+
+        .corner-accent.bottom-right {
+            bottom: 40px;
+            right: 40px;
+            border-bottom: 3px solid #D40000;
+            border-right: 3px solid #D40000;
+        }
+
+        /* Side Accent Lines */
+        .side-line {
+            position: absolute;
+            background: linear-gradient(
+                180deg,
+                transparent 0%,
+                rgba(212, 0, 0, 0.4) 20%,
+                rgba(212, 0, 0, 0.6) 50%,
+                rgba(212, 0, 0, 0.4) 80%,
+                transparent 100%
+            );
+            z-index: 5;
+        }
+
+        .side-line.left {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 200px;
+        }
+
+        .side-line.right {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <!-- Background Effects -->
+        <div class="red-glow-tl"></div>
+        <div class="red-glow-br"></div>
+
+        <!-- Corner Accents -->
+        <div class="corner-accent top-left"></div>
+        <div class="corner-accent top-right"></div>
+        <div class="corner-accent bottom-left"></div>
+        <div class="corner-accent bottom-right"></div>
+
+        <!-- Side Lines -->
+        <div class="side-line left"></div>
+        <div class="side-line right"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="eyebrow">Professional Windows Utility</div>
+            <div class="title">STX.1</div>
+            <div class="subtitle">System Monitor</div>
+            <div class="divider"></div>
+            <div class="tagline">Strategic <span>Excellence</span>. Engineered.</div>
+            <div class="url">stx-1.com</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="50%" style="stop-color:#000000"/>
+      <stop offset="100%" style="stop-color:#0d0d0d"/>
+    </linearGradient>
+
+    <!-- Red Glow Gradient -->
+    <radialGradient id="redGlowTL" cx="0%" cy="0%" r="50%">
+      <stop offset="0%" style="stop-color:#D40000;stop-opacity:0.15"/>
+      <stop offset="40%" style="stop-color:#D40000;stop-opacity:0.05"/>
+      <stop offset="70%" style="stop-color:#D40000;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="redGlowBR" cx="100%" cy="100%" r="60%">
+      <stop offset="0%" style="stop-color:#D40000;stop-opacity:0.12"/>
+      <stop offset="40%" style="stop-color:#D40000;stop-opacity:0.04"/>
+      <stop offset="70%" style="stop-color:#D40000;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="40%" style="stop-color:#000000;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.6"/>
+    </radialGradient>
+
+    <!-- Chrome Divider Gradient -->
+    <linearGradient id="chromeDivider" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#404040;stop-opacity:0"/>
+      <stop offset="15%" style="stop-color:#404040"/>
+      <stop offset="35%" style="stop-color:#a3a3a3"/>
+      <stop offset="50%" style="stop-color:#ffffff"/>
+      <stop offset="65%" style="stop-color:#a3a3a3"/>
+      <stop offset="85%" style="stop-color:#404040"/>
+      <stop offset="100%" style="stop-color:#404040;stop-opacity:0"/>
+    </linearGradient>
+
+    <!-- Side Line Gradient -->
+    <linearGradient id="sideLineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D40000;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#D40000;stop-opacity:0.4"/>
+      <stop offset="50%" style="stop-color:#D40000;stop-opacity:0.6"/>
+      <stop offset="80%" style="stop-color:#D40000;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#D40000;stop-opacity:0"/>
+    </linearGradient>
+
+    <!-- Text Shadow Filter -->
+    <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000000" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="30" flood-color="#D40000" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Fonts -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Russo+One&amp;family=Lato:wght@400;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Red Glows -->
+  <rect width="600" height="600" x="-100" y="-100" fill="url(#redGlowTL)"/>
+  <rect width="800" height="800" x="500" y="100" fill="url(#redGlowBR)"/>
+
+  <!-- Carbon Fiber Pattern (simplified) -->
+  <pattern id="carbonPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+    <rect width="4" height="4" fill="transparent"/>
+    <line x1="0" y1="0" x2="0" y2="4" stroke="rgba(30,30,30,0.3)" stroke-width="0.5"/>
+    <line x1="0" y1="0" x2="4" y2="0" stroke="rgba(30,30,30,0.3)" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#carbonPattern)" opacity="0.4"/>
+
+  <!-- Vignette Overlay -->
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+
+  <!-- Corner Accents -->
+  <path d="M40 120 L40 40 L120 40" fill="none" stroke="#D40000" stroke-width="3"/>
+  <path d="M1080 40 L1160 40 L1160 120" fill="none" stroke="#D40000" stroke-width="3"/>
+  <path d="M40 510 L40 590 L120 590" fill="none" stroke="#D40000" stroke-width="3"/>
+  <path d="M1080 590 L1160 590 L1160 510" fill="none" stroke="#D40000" stroke-width="3"/>
+
+  <!-- Side Lines -->
+  <rect x="0" y="215" width="4" height="200" fill="url(#sideLineGradient)"/>
+  <rect x="1196" y="215" width="4" height="200" fill="url(#sideLineGradient)"/>
+
+  <!-- Content -->
+  <g text-anchor="middle">
+    <!-- Eyebrow -->
+    <text x="600" y="200"
+          font-family="Lato, sans-serif"
+          font-size="14"
+          font-weight="700"
+          fill="#D40000"
+          letter-spacing="6">
+      PROFESSIONAL WINDOWS UTILITY
+    </text>
+
+    <!-- Main Title: STX.1 -->
+    <text x="600" y="330"
+          font-family="Russo One, sans-serif"
+          font-size="140"
+          font-weight="400"
+          fill="rgba(255,255,255,0.95)"
+          stroke="#242424"
+          stroke-width="6"
+          paint-order="stroke fill"
+          filter="url(#textShadow)"
+          letter-spacing="2">
+      STX.1
+    </text>
+
+    <!-- Subtitle: SYSTEM MONITOR -->
+    <text x="600" y="395"
+          font-family="Russo One, sans-serif"
+          font-size="52"
+          font-weight="400"
+          fill="rgba(255,255,255,0.85)"
+          stroke="#242424"
+          stroke-width="4"
+          paint-order="stroke fill"
+          letter-spacing="8">
+      SYSTEM MONITOR
+    </text>
+
+    <!-- Chrome Divider -->
+    <rect x="450" y="430" width="300" height="3" fill="url(#chromeDivider)" rx="1.5"/>
+
+    <!-- Tagline -->
+    <text x="600" y="480"
+          font-family="Lato, sans-serif"
+          font-size="20"
+          font-weight="400"
+          fill="rgba(255,255,255,0.6)"
+          letter-spacing="4">
+      STRATEGIC
+      <tspan fill="#D40000">EXCELLENCE</tspan>
+      . ENGINEERED.
+    </text>
+
+    <!-- URL -->
+    <text x="600" y="540"
+          font-family="Lato, sans-serif"
+          font-size="18"
+          font-weight="700"
+          fill="rgba(255,255,255,0.4)"
+          letter-spacing="2">
+      stx-1.com
+    </text>
+  </g>
+</svg>

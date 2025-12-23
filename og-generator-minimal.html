@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, height=630">
+    <title>STX.1 OG Image - Minimal Variant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Subtle gradient overlay */
+        .og-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                145deg,
+                rgba(212, 0, 0, 0.08) 0%,
+                transparent 50%,
+                rgba(212, 0, 0, 0.05) 100%
+            );
+        }
+
+        /* Content */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 100px;
+        }
+
+        /* Left Section */
+        .left {
+            flex: 1;
+        }
+
+        /* Red Accent Bar */
+        .accent-bar {
+            width: 60px;
+            height: 6px;
+            background: #D40000;
+            margin-bottom: 32px;
+            box-shadow: 0 0 30px rgba(212, 0, 0, 0.5);
+        }
+
+        /* Main Title */
+        .title {
+            font-family: 'Russo One', sans-serif;
+            font-size: 120px;
+            font-weight: 400;
+            line-height: 0.9;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            -webkit-text-stroke: 5px #1a1a1a;
+            paint-order: stroke fill;
+            margin-bottom: 16px;
+        }
+
+        .title .highlight {
+            color: #D40000;
+            -webkit-text-stroke: 5px #4a0000;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-family: 'Russo One', sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            -webkit-text-stroke: 2px #1a1a1a;
+            paint-order: stroke fill;
+            margin-bottom: 40px;
+        }
+
+        /* Description */
+        .description {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.05em;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        /* Right Section - Stats/Features */
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding-left: 80px;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #D40000 0%, #8B0000 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 4px 20px rgba(212, 0, 0, 0.3);
+        }
+
+        .feature-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Bottom URL Bar */
+        .url-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(90deg, #D40000 0%, #8B0000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .url-bar span {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <div class="content">
+            <div class="left">
+                <div class="accent-bar"></div>
+                <div class="title">STX<span class="highlight">.</span>1</div>
+                <div class="subtitle">System Monitor</div>
+                <div class="description">
+                    Professional Windows system monitoring with Game Mode,
+                    FPS overlay, and real-time performance tracking.
+                </div>
+            </div>
+            <div class="right">
+                <div class="feature">
+                    <div class="feature-icon">&#9881;</div>
+                    <div class="feature-text">Game Mode</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#9673;</div>
+                    <div class="feature-text">FPS Overlay</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#9888;</div>
+                    <div class="feature-text">Real-time Alerts</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128202;</div>
+                    <div class="feature-text">30-Day History</div>
+                </div>
+            </div>
+        </div>
+        <div class="url-bar">
+            <span>stx-1.com</span>
+        </div>
+    </div>
+</body>
+</html>
